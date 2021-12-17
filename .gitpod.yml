@@ -1,4 +1,5 @@
 # Commands to start on workspace startup
 tasks:
-  - init: npm install & pip install poetry
-    command: npm build
+  - before: pip install poetry
+    init: npm install & poetry install
+    command: poetry shell
